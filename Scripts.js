@@ -1,27 +1,25 @@
 console.log("Ajuda mesmo ele");
-function calcularMedia() {
-   
-    var nota1 = parseFloat(document.getElementById("nota1").value);
-    var nota2 = parseFloat(document.getElementById("nota2").value);
-
+function verificarMaior() {
     
-    if (isNaN(nota1) || isNaN(nota2) || nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10) {
-        alert("Por favor, insira notas válidas entre 0 e 10.");
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+    var num3 = parseInt(document.getElementById("num3").value);
+
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        alert("Por favor, insira três números válidos.");
         return;
     }
 
-  
-    var media = (nota1 + nota2) / 2;
+    var maior = num1;
 
-    
-    var resultado = "";
-    if (media == 10) {
-        resultado = "Aprovado com Distinção!";
-    } else if (media >= 7) {
-        resultado = "Aprovado!";
-    } else {
-        resultado = "Reprovado!";
+    if (num2 > maior) {
+        maior = num2;
+    }
+    if (num3 > maior) {
+        maior = num3;
     }
 
-    document.getElementById("resultado").innerText = "Média: " + media.toFixed(2) + " - " + resultado;
+ 
+    document.getElementById("resultado").innerText = "O maior número é: " + maior;
 }
