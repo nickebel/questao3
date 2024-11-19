@@ -1,4 +1,4 @@
-console.log("Ajuda mesmo ele");
+
 function verificarMaior() {
     
     var num1 = parseInt(document.getElementById("num1").value);
